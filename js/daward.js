@@ -368,7 +368,7 @@ function iniciarMapa ()
 
   mapa.width = 800
   mapa.height = 400
-  intervalo = setInterval(pintarCanvas, 50);
+  intervalo = setInterval(pintarCanvas, 10);
   window.addEventListener("keydown", sePresionoTecla);
   window.addEventListener("keyup", detenerMovimiento);
 
