@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAWARD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+    <section id="eligeMascota">
+        <div class="tituloJuego">
+
+            <!--TITULO DE SELECCIONAR PERONAJE-->
+            <h1 id="titulo">DAWARD</h1>
+
+        </div>
+
+
+
+        <div>
+
+            <h2 class="subtitulo">Elige tu Guerrero</h2>
+
+        </div>
+
+       <br>
+        
+
+
+            <img class="sangre" src="assets/sangre.png" alt="sangre">
+
+<!--CONTENEDOR DE TARJETAS, ES DINAMICO POR ESO ESTA VACIO (SE ENCUENTRA EN LA LINEA 87 DE JS)-->
+
+        <div  id="contenedorTarjetas"  class="tarjeta activador">
+
+           
+
+
+        </div>
+
+
+
+        <BR></BR>
+        <BR></BR>
+        <div class="sticky">
+            <div class="contenedorBtnSeleccionarGuerrero">
+                <button class="btnSeleccionar activadorbtn" id="boton-mascota">Seleccionar</button> 
+            </div>
+        </div>
+
+       
+         
+    </section>
+    <BR></BR>
+
+ <!--SECCION DE DIBUJADO DEL MAPA-->
+ <section id="verMapa">
+    <h2 class="subtitulo">Recorre el mapa con tu Guerrero</h2>
+    <canvas id="mapa"></canvas>
+    <button onmouseup="detenerMovimiento()" onmousedown="moverTeotlArriba()">^</button onmouseup="detenerMovimiento()">
+    <button onmouseup="detenerMovimiento()" onmousedown="moverTeotlDerecha()"> >></button onmouseup="detenerMovimiento()">
+    <button onmouseup="detenerMovimiento()" onmousedown="moverTeotlIzquierda()"><<</button onmouseup="detenerMovimiento()">
+    <button onmouseup="detenerMovimiento()" onmousedown="moverTeotlAbajo()">V</button>
+    
+
+
+</section>
+
+    <section id="tituloAtaques" class="letrasBlancas">
+
+        <div class="contenedorSubtituloArena">
+            <!--TITULO DE ATAQUES-->
+            <h2 class="subtituloEligeGuerrero">⚔ Bienvenido a la Arena ⚔</h2>
+
+        </div>
+
+
+    </section>
+
+    <div id="mensajes" class="letrasBlancas">
+
+        <div class="resultadoCombate">
+
+            <p id="resultado">GLORIA EN COMBATE</p>
+
+        </div>
+
+
+
+        <BR></BR>
+
+
+        <section id="reiniciar">
+
+            <div class="btnReinicio">
+
+                <button class="activadorbtn" id="boton-reiniciar">Otro Combate</button>
+            </div>
+
+
+
+        </section>
+    </div>
+
+
+    <section id="ataques">
+
+
+        <div class="ataques">
+
+            <div class="tarjetaAtaqueJugador">
+                <p>Vidas ❤</p>
+                <p id="vidasJugador">3</p>
+                <p class="nombreJugador" id="nombreMascotaJ"></p>
+                <div id="ataquesJugador"></div>
+
+
+
+            </div>
+
+            <div class="tarjetaAtaqueEnemigo">
+                <p>Vidas ❤</p>
+                <p id="vidasEnemigo">3</p>
+                <p class="nombreEnemigo" id="nombreMascotaE"></p>
+                <div id="ataquesEnemigo"></div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <BR></BR>
+    <BR></BR>
+
+    <section id="botonesAtaque" class="letrasBlancas">
+
+
+        <div class="contenedorBtnAtaque">
+
+            <div class="separacionBtnAtaques activadorbtn">
+                <button id="boton-AtqLigero" class="formatoBtnAtaques">Ataque Ligero 🗡</button>
+                <button id="boton-AtqPesado" class="formatoBtnAtaques">Ataque Pesado 🪓</button>
+                <button id="boton-AtqInnato" class="formatoBtnAtaques">Habilidad Innata 🧬</button>
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+    <script defer src="js/daward.js"></script>
+</body>
+
+</html>

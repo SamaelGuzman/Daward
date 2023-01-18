@@ -1,0 +1,796 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Fredoka+One&display=swap");
+* {
+  margin: 0%;
+}
+
+body {
+  font-family: "Cinzel", serif;
+  background-color: black;
+  width: 100%;
+}
+
+input{ 
+  display: none;
+}
+
+#eligeMascota {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#titulo {
+  background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(170, 13, 13));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  padding: 23px;
+  font-family: "Cinzel", serif;
+  font-size: 60px;
+}
+
+.subtitulo {
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 23px;
+
+  font-size: 30px;
+}
+
+.tarjetaMascota {
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  padding: 10px;
+
+  background-color: #e2e2e2;
+  border-radius: 20px;
+  color: white;
+}
+
+.tarjeta {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.tarjetaMascota img {
+  width: 120px;
+  background-color: #e2e2e2;
+  display: flex;
+  padding-left: 20px;
+}
+
+.tarjetaMascota p {
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  width: 175px;
+  height: 37px;
+  border-radius: 5px;
+}
+
+.sangre {
+  width: 600px;
+  position: absolute;
+  z-index: -1;
+  left: 30px;
+  top: 20px;
+}
+
+.btnSeleccionar {
+  background-color: grey;
+  color: white;
+  width: 241px;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: solid black 1px;
+  font-family: "Cinzel", serif;
+  font-size: 30px;
+  border-radius: 5px;
+  bottom: 200px;
+  right: 836px;
+  animation: wiggle 2s linear infinite;
+}
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+
+#verMapa {
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+}
+
+#mapa{
+  border: 2px solid white;
+   
+}
+
+.separacionBtnAtaques {
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.letrasBlancas {
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#eligeAtaque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjetaAtaqueJugador {
+  border: solid white;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  overflow: scroll;
+  height: 480px;
+  width: 412px;
+  overflow-y: visible;
+  overflow-x: hidden;
+  font-size: 35px;
+}
+
+.tarjetaAtaqueEnemigo {
+  border: solid white;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  overflow: scroll;
+  height: 480px;
+  width: 412px;
+  overflow-y: visible;
+  overflow-x: hidden;
+  font-size: 35px;
+}
+#resultado {
+  background-color: grey;
+  padding: 30px;
+  border-radius: 5px;
+  font-size: 25px;
+  border: solid white;
+  display: flex;
+  justify-content: center;
+  width: 273px;
+}
+
+#boton-reiniciar {
+  border: transparent;
+  color: white;
+  font-family: "Cinzel", serif;
+  background-color: gray;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 28px;
+  animation: wiggle 2s linear infinite;
+}
+
+.ataques {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  color: white;
+  justify-content: space-around;
+  justify-items: center;
+}
+
+.nombreEnemigo {
+  font-size: 30px;
+  color: coral;
+}
+
+.nombreJugador {
+  font-size: 30px;
+  color: rgb(33, 226, 75);
+}
+
+.activador p:hover,
+p:active,
+input:hover + p,
+input:active + p {
+  background-color: blueviolet;
+}
+
+.activadorbtn button:hover,
+button:active,
+input:hover + button,
+input:active + button {
+  background-color: blueviolet;
+}
+
+.contenedorBtnAtaque {
+  bottom: 100px;
+  gap: 10px;
+}
+
+.formatoBtnAtaques {
+  background-color: grey;
+  color: white;
+  width: 350px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: solid black 1px;
+  font-family: "Cinzel", serif;
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+/*RESPONSIVE PARA PORTATILES DE TAMANO MEDIO */
+
+@media (max-width: 1366px) {
+  @keyframes wiggle {
+    0%,
+    7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%,
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+
+  .tarjetaAtaqueEnemigo {
+    border: solid white;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    overflow: scroll;
+    height: 290px;
+    width: 252px;
+    overflow-y: visible;
+    overflow-x: hidden;
+    font-size: 23px;
+  }
+
+  .tarjetaAtaqueJugador {
+    border: solid white;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    overflow: scroll;
+    height: 290px;
+    width: 252px;
+    overflow-y: visible;
+    overflow-x: hidden;
+    font-size: 23px;
+  }
+
+  #boton-reiniciar {
+    border: transparent;
+    color: white;
+    font-family: "Cinzel", serif;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .formatoBtnAtaques {
+    background-color: grey;
+    color: white;
+    width: 240px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 1px;
+    font-family: "Cinzel", serif;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+
+  .contenedorBtnAtaque {
+    bottom: 80px;
+    gap: 10px;
+  }
+
+  .tarjeta {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+  }
+
+  .btnSeleccionar {
+    background-color: grey;
+    color: white;
+    width: 241px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 1px;
+    font-family: "Cinzel", serif;
+    font-size: 30px;
+    border-radius: 5px;
+
+    bottom: 180px;
+    right: 560px;
+  }
+}
+
+@media (max-width: 1280px) {
+  @keyframes wiggle {
+    0%,
+    7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%,
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+  #boton-reiniciar {
+    border: transparent;
+    color: white;
+    font-family: "Cinzel", serif;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .tarjeta {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+
+    justify-content: center;
+  }
+
+  .btnSeleccionar {
+    background-color: grey;
+    color: white;
+    width: 241px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 1px;
+    font-family: "Cinzel", serif;
+    font-size: 30px;
+    border-radius: 5px;
+
+    bottom: 150px;
+    right: 516px;
+  }
+}
+
+@media (max-width: 720px) {
+  @keyframes wiggle {
+    0%,
+    7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%,
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+  #titulo {
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(170, 13, 13));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    justify-content: center;
+    padding: 23px;
+    font-family: "Cinzel", serif;
+    font-size: 97px;
+    width: 439px;
+  }
+
+  .subtitulo {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 23px;
+
+    font-size: 42px;
+    width: 593px;
+  }
+
+  .subtituloEligeGuerrero {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 23px;
+
+    font-size: 42px;
+    width: 593px;
+  }
+
+  #boton-reiniciar {
+    border: transparent;
+    color: white;
+    font-family: "Cinzel", serif;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .formatoBtnAtaques {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    bottom: 184px;
+    right: 60px;
+    width: 207px;
+    background-color: grey;
+    color: white;
+    justify-content: center;
+    flex-direction: column;
+    border: solid black 1px;
+    font-family: "Cinzel", serif;
+    font-size: 17px;
+    border-radius: 5px;
+  }
+
+  /* BOTON SELECCIONAR */
+
+  .btnSeleccionar {
+    background-color: grey;
+    color: white;
+    width: 341px;
+    height: 108px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 1px;
+    font-family: "Cinzel", serif;
+    font-size: 42px;
+    border-radius: 5px;
+  }
+
+  .tarjeta {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+  }
+
+  .tarjetaAtaqueEnemigo {
+    border: solid white;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    overflow: scroll;
+    height: 370px;
+    width: 212px;
+    overflow-y: visible;
+    overflow-x: hidden;
+
+    font-size: 20px;
+  }
+
+  .tarjetaAtaqueJugador {
+    border: solid white;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    overflow: scroll;
+    height: 370px;
+    width: 212px;
+    overflow-y: visible;
+    overflow-x: hidden;
+
+    font-size: 20px;
+  }
+
+  #resultado {
+    width: 273px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .tarjeta {
+    display: flex;
+    gap: 10px;
+
+    flex-direction: column;
+  }
+
+  #titulo {
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(170, 13, 13));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+
+    justify-content: center;
+    padding: 23px;
+    font-family: "Cinzel", serif;
+    font-size: 67px;
+    width: 312px;
+  }
+
+  .subtitulo {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 23px;
+
+    font-size: 26px;
+    width: 276px;
+  }
+
+  .sangre {
+    width: 300px;
+
+    z-index: -1;
+    left: 10px;
+    top: 220px;
+  }
+
+  .contenedorBtnSeleccionarGuerrero {
+    bottom: 630px;
+    right: 390px;
+  }
+
+  .contenedorBtnAtaque {
+    bottom: -350px;
+    gap: 10px;
+    right: -290px;
+  }
+  #boton-reiniciar {
+    border: transparent;
+    color: white;
+    font-family: "Cinzel", serif;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 250px;
+    position: fixed;
+    left: 62px;
+    top: 614px;
+    animation: wiggle 2s linear infinite;
+  }
+
+  .subtituloEligeGuerrero {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 23px;
+    font-size: 17px;
+    width: 293px;
+  }
+
+  #resultado {
+    width: 173px;
+    height: 4px;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    align-items: center;
+  }
+
+  .letrasBlancas {
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 374px;
+  }
+
+  .tarjetaAtaqueEnemigo {
+    border: solid white;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    overflow: scroll;
+    height: 370px;
+    width: 145px;
+    overflow-y: visible;
+    overflow-x: hidden;
+    font-size: 15px;
+  }
+
+  .tarjetaAtaqueJugador {
+    border: solid white;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    overflow: scroll;
+    height: 370px;
+    width: 145px;
+    overflow-y: visible;
+    overflow-x: hidden;
+    font-size: 15px;
+  }
+
+  .formatoBtnAtaques {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    bottom: 184px;
+    right: 60px;
+    width: 92px;
+    background-color: grey;
+    color: white;
+    justify-content: center;
+    flex-direction: column;
+    border: solid black 1px;
+    font-family: "Cinzel", serif;
+    font-size: 13px;
+    border-radius: 5px;
+  }
+  .ataques {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    color: white;
+    justify-content: space-around;
+    justify-items: center;
+    width: 369px;
+  }
+
+  .tarjetaMascota {
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #e2e2e2;
+    border-radius: 20px;
+    color: white;
+  }
+  .tarjetaMascota img {
+    width: 90px;
+    background-color: #e2e2e2;
+    display: flex;
+    padding-left: 20px;
+    height: 100px;
+  }
+
+  .tarjetaMascota p {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    width: 128px;
+    height: 37px;
+    border-radius: 5px;
+  }
+
+  .sticky {
+    display: flex;
+    position: fixed;
+    bottom: 50px;
+  }
+  .separacionBtnAtaques {
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btnSeleccionar {
+    background-color: grey;
+    color: white;
+    width: 341px;
+    height: 108px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 1px;
+    font-family: "Cinzel", serif;
+    font-size: 42px;
+    border-radius: 5px;
+    animation: wiggle 2s linear infinite;
+  }
+
+  @keyframes wiggle {
+    0%,
+    7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%,
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+}
