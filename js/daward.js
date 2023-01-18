@@ -82,7 +82,7 @@ personajes.push(GuerreroJaguar, Vikingo, Caballero);
 function iniciarJuego() {
   personajes.forEach((Daward) => {
     opcionDePersonajes = `
-  <label class="tarjetaMascota" for=${Daward.nombre}>
+  <label class="tarjetaMascota activador" for=${Daward.nombre}>
   <p>${Daward.nombre}</p>
   <img src= ${Daward.foto} alt=${Daward.nombre} height="150px">
 </label>

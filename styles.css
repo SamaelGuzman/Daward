@@ -222,14 +222,15 @@ justify-content: center;
   font-size: 30px;
   color: rgb(33, 226, 75);
 }
-
+/*Clase para que cambien de colores de las etiquetas del personaje*/
 .activador p:hover,
 p:active,
 input:hover + p,
 input:active + p {
   background-color: blueviolet;
 }
-
+ 
+/*Clase para que el boton de seleccionar cambie de color*/
 .activadorbtn button:hover,
 button:active,
 input:hover + button,
