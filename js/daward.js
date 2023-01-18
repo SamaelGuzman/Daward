@@ -1,6 +1,5 @@
 const contenedorTarjetas = document.getElementById("contenedorTarjetas");
-const sectionVerMapa = document.getElementById("verMapa");
-const mapa = document.getElementById("mapa");
+ 
 
 let personajes = [];
 let ataqueJugador;
@@ -9,15 +8,14 @@ let ataqueEnemigo;
 let vidasJugador = 3;
 let vidasEnemigo = 3;
 let personajeJugador;
-let lienzo = mapa.getContext("2d");
+ 
 
 let inputGuerreroJaguar;
 let inputVikingo;
 let inputCaballero;
 let spannombreMascotaJ;
-let intervalo;
-let mapaBackground = new Image()
-mapaBackground.src = './assets/Mapa.png'
+ 
+ 
 
 //CLASE DE PERSONAJES, CONTIENE ATRIBUTO NOMBRE, FOTO, VIDAS, ATAQUES
 
@@ -99,7 +97,7 @@ function iniciarJuego() {
     spannombreMascotaJ = document.getElementById("nombreMascotaJ");
   });
 
-  sectionVerMapa.style.display = "none";
+ 
 
   let sectionReiniciar = document.getElementById("reiniciar");
   sectionReiniciar.style.display = "none";
@@ -128,6 +126,7 @@ function iniciarJuego() {
 
   let botonReiniciar = document.getElementById("boton-reiniciar");
   botonReiniciar.addEventListener("click", reiniciarJuego);
+   
 }
 
 //ELEGIR MASCOTA
@@ -137,25 +136,21 @@ function seleccionarMascota() {
   secctionSeleccionarMascota.style.display = "none";
 
   //ME MUESTRA LA SECCION SELECCION DE ATAQUES CUANDO ENTRAMOS A ESTE BLOQUE
-  //let secctionSeleccionarAtaque = document.getElementById("tituloAtaques");
-  //secctionSeleccionarAtaque.style.display = "flex";
+  let secctionSeleccionarAtaque = document.getElementById("tituloAtaques");
+  secctionSeleccionarAtaque.style.display = "flex";
 
-  sectionVerMapa.style.display = "flex";
-  pintarCanvas();
-
-
-  iniciarMapa()
+ 
 
 
-  // let sectionBotonesAtaques = document.getElementById("botonesAtaque");
-  // sectionBotonesAtaques.style.display = "flex";
+   let sectionBotonesAtaques = document.getElementById("botonesAtaque");
+   sectionBotonesAtaques.style.display = "flex";
 
-  // let vidas = document.getElementById("ataques");
-  // vidas.style.display = "grid";
+   let vidas = document.getElementById("ataques");
+   vidas.style.display = "grid";
 
-  //BOTON PARA REINICIAR JUEGO
-  // let secctionmensajes = document.getElementById("mensajes");
-  // secctionmensajes.style.display = "flex";
+ // BOTON PARA REINICIAR JUEGO
+   let secctionmensajes = document.getElementById("mensajes");
+  secctionmensajes.style.display = "flex";
 
   if (inputGuerreroJaguar.checked == true) {
     alert("Elegiste TEOTL");
